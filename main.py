@@ -8,6 +8,5 @@ def on_received_value(name, value):
         elif value == 3:
             serial.write_line("Go to the right")
 
-
 radio.on_received_value(on_received_value)
 radio.set_group(1)
