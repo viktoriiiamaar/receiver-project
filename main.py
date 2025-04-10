@@ -1,4 +1,5 @@
 def on_received_value(name, value):
+    basic.pause(1000)
     if name == "step":
         if value == 1:
             serial.write_line("Go forward")

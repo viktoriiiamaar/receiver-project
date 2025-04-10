@@ -1,4 +1,5 @@
 radio.onReceivedValue(function on_received_value(name: string, value: number) {
+    basic.pause(1000)
     if (name == "step") {
         if (value == 1) {
             serial.writeLine("Go forward")
