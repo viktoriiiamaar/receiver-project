@@ -7,6 +7,10 @@ radio.onReceivedValue(function on_received_value(name: string, value: number) {
             serial.writeLine("Go to the left")
         } else if (value == 3) {
             serial.writeLine("Go to the right")
+        } else if (value == 4) {
+            serial.writeLine("Magnet found!")
+        } else if (value == 0) {
+            serial.writeLine("Dead end. Heading back to the last intersection")
         }
         
     }
