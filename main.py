@@ -11,7 +11,9 @@ def on_received_value(name, value):
             serial.write_line("Magnet found!")
         elif value == 0:
             serial.write_line("Dead end. Heading back to the last intersection")
-
+    if name ==  "int":
+        serial.write_value("Number of grids to the last intersection:", value)
+        
 radio.on_received_value(on_received_value)
 radio.set_group(1)
 
