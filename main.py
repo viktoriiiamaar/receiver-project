@@ -14,7 +14,7 @@ def on_received_value(name, value):
         elif value == 5:
             serial.write_line("Turning around.")
     if name ==  "int":
-        serial.write_value("Number of grids to the last intersection:", value)
+        serial.write_value("Number of grids to the last intersection", value)
         
 radio.on_received_value(on_received_value)
 radio.set_group(10)

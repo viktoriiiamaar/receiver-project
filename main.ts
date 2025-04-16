@@ -18,7 +18,7 @@ radio.onReceivedValue(function on_received_value(name: string, value: number) {
     }
     
     if (name == "int") {
-        serial.writeValue("Number of grids to the last intersection:", value)
+        serial.writeValue("Number of grids to the last intersection", value)
     }
     
 })
