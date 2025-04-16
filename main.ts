@@ -22,4 +22,4 @@ radio.onReceivedValue(function on_received_value(name: string, value: number) {
     }
     
 })
-radio.setGroup(1)
+radio.setGroup(10)
