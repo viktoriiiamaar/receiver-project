@@ -1,6 +1,8 @@
 radio.onReceivedValue(function on_received_value(name: string, value: number) {
     basic.pause(1000)
     if (name == "step") {
+        // when receiving values decode them according to the numbers assigned
+        //  previously in the vode
         if (value == 1) {
             serial.writeLine("Go forward")
         } else if (value == 2) {
@@ -18,8 +20,10 @@ radio.onReceivedValue(function on_received_value(name: string, value: number) {
     }
     
     if (name == "int") {
+        // if dead end was encountered, track how many grids the robot has to travel 
+        //  in order to return back to intersection
         serial.writeValue("Number of grids to the last intersection", value)
     }
     
 })
-radio.setGroup(10)
+radio.setGroup(1)
